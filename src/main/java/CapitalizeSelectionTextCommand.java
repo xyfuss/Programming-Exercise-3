@@ -15,4 +15,13 @@ public class CapitalizeSelectionTextCommand extends CapitalizeTextCommand{
     }
     this.selection = selection;
   }
+
+  @Override
+  public String execute(String text) {
+    if (text == null || text.isBlank() || text.isEmpty() || !text.contains(getSelection())) {
+      throw new IllegalArgumentException();
+    }
+    String replacement = getSelection().substring(0,1).toUpperCase() + getSelection().substring(1);
+    return text.replace(getSelection(),replacement);
+  }
 }
