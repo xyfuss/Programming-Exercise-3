@@ -29,6 +29,9 @@ public class WrapTextCommand implements TextCommand{
     this.end = end;
   }
   public String execute(String text) {
+    if ( text == null ) {
+      throw new IllegalArgumentException();
+    }
     return this.getOpening() + text + this.getEnd();
   }
 }

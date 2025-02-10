@@ -5,6 +5,9 @@ public class ReplaceFirstTextCommand extends ReplaceTextCommand{
   }
   @Override
   public String execute(String text) {
-    return text.replaceFirst(this.getTarget(),this.getReplacement());
+    if ( text == null || text.isEmpty()|| text.isBlank() || !text.contains(getTarget())) {
+      throw new IllegalArgumentException();
+    }
+    return text.replaceFirst(getTarget(),getReplacement());
   }
 }

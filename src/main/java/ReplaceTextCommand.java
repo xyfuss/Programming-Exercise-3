@@ -31,6 +31,9 @@ public class ReplaceTextCommand implements TextCommand {
   }
 
   public String execute(String text) {
+    if ( text == null || text.isEmpty()|| text.isBlank() || !text.contains(getTarget())) {
+      throw new IllegalArgumentException();
+    }
     return text.replace(this.getTarget(),this.getReplacement());
   }
 

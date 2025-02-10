@@ -19,6 +19,9 @@ public class WrapSelectionTextCommand extends WrapTextCommand{
 
   @Override
   public String execute(String text) {
+    if ( text == null || text.isEmpty()|| text.isBlank() || !text.contains(getSelection())) {
+      throw new IllegalArgumentException();
+    }
     String replacement = getOpening() + getSelection() + getEnd();
     return text.replace(getSelection(),replacement);
   }
