@@ -1,7 +1,9 @@
-public class ReplaceTextCommand implements TextCommand{
+package replacecommands;
 
-  private String target;
-  private String replacement;
+public class ReplaceTextCommand implements TextCommand {
+
+  protected String target;
+  protected String replacement;
 
   public ReplaceTextCommand(String target, String replacement) {
     this.setReplacement(replacement);
