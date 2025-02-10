@@ -1,5 +1,3 @@
-package replacecommands;
-
 public class ReplaceFirstTextCommand extends ReplaceTextCommand{
 
   public ReplaceFirstTextCommand(String target, String replacement) {

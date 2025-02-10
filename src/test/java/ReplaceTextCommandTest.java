@@ -1,8 +1,3 @@
-package replacecommands;
-
-import static org.junit.jupiter.api.Assertions.*;
-
-
 class ReplaceTextCommandTest {
 
 

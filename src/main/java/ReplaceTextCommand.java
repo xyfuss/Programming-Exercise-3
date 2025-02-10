@@ -1,5 +1,3 @@
-package replacecommands;
-
 public class ReplaceTextCommand implements TextCommand {
 
   protected String target;
