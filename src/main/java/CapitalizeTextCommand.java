@@ -4,6 +4,6 @@ public class CapitalizeTextCommand implements TextCommand{
     if (text == null) {
       throw new IllegalArgumentException();
     }
-    return text.substring(0,1).toUpperCase();
+    return text.substring(0,1).toUpperCase() + text.substring(1);
   }
 }
